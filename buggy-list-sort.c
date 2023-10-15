@@ -39,8 +39,8 @@ void bubble_sort(struct link* head) {
     do {
       struct link* curr = head;
       swapped = 0;
-      while (curr != NULL) {
-        if (curr->val > curr->next->val && curr->next != NULL) {
+      while (curr->next != NULL) {
+        if (curr->val > curr->next->val) {
           swap(&curr->val, &curr->next->val);
           swapped = 1;
         }
