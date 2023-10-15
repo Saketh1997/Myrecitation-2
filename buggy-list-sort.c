@@ -35,14 +35,14 @@ void swap(int* a, int* b) {
  */
 void bubble_sort(struct link* head) {
   if (head != NULL) {
-    int swapped = 0;
+    int swapped = 1;
     while (swapped) {
       struct link* curr = head;
       swapped = 0;
       while (curr != NULL) {
         if (curr->val > curr->next->val) {
           swap(&curr->val, &curr->next->val);
-          swapped = 1;
+//          swapped = 1;
         }
         curr = curr->next;
       }
