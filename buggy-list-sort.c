@@ -36,7 +36,7 @@ void swap(int* a, int* b) {
 void bubble_sort(struct link* head) {
   if (head != NULL) {
     int swapped = 0;
-    do {
+    while (swapped) {
       struct link* curr = head;
       swapped = 0;
       while (curr != NULL) {
@@ -46,7 +46,7 @@ void bubble_sort(struct link* head) {
         }
         curr = curr->next;
       }
-    } while (swapped);
+    };
   }
 }
 
